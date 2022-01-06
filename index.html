@@ -19,7 +19,7 @@
         <div class="navbar__logo">
             <a href="index.html"><img src="img/logo1.png" alt=""></a>
         </div>
-        <div>
+        <div class="navbar__menu">
             <ul class="navbar__menu">
                 <li class="navbar__menu__item active">Home</li>
                 <li class="navbar__menu__item">About</li>
@@ -29,6 +29,10 @@
                 <li class="navbar__menu__item">Contact</li>
             </ul>
         </div>
+        <!-- Toggle btn -->
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <!-- Home -->
@@ -151,7 +155,8 @@
 
     <!-- work -->
     <section id="work" class="section">
-        <h1>My work</h1>
+        <div class="section__container">
+            <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
             <button class="category__btn active">All <span class="category__count">8</span></button>
@@ -183,11 +188,13 @@
                 </div>
             </a>
         </div>
+        </div>
     </section>
 
     <!-- testimonials -->
     <section id="testimonials" class="section">
-        <h1>Testimonials</h1>
+        <div class="section__container">
+            <h1>Testimonials</h1>
         <h3>See what they say about me</h3>
         <div class="testimonials">
             <div class="testimonial">
@@ -208,6 +215,7 @@
                 </div>
                 <img src="img/testimonial/man1.jpg" alt="" class="testimonial__avator">
             </div>
+        </div>
         </div>
     </section>
 
