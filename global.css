@@ -47,4 +47,9 @@ ul{
   list-style: none;
   padding-left: 0;
 }
-
+button{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
