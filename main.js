@@ -102,7 +102,3 @@ workBtnContainer.addEventListener('click', (e)=>{
         projectContainer.classList.remove('ani-out');
     },300)
 });
-
-const sectionIds = ['#home', '#about','#skills','#work','#testimonials','#contact'];
-const sections = sectionIds.map(id => document.querySelector(id));
-console.log(sections);
