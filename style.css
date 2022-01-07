@@ -37,6 +37,7 @@ h3{
   padding: 16px;
   width: 100%;
   transition: all var(--animation-duration) ease;
+  z-index: 1;
 }
 #navbar.add--dark{
   background-color: var(--color-black);
@@ -54,11 +55,10 @@ h3{
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
-}
-.navbar__menu__item.active{
-  border: 1px solid var(--color-white);
+  border: 1px solid transparent;
   border-radius: var(--size-border-radius);
 }
+
 .navbar__menu__item:hover{
   background-color: var(--color-light-white);
   color: var(--color-black);
@@ -223,12 +223,12 @@ h3{
   font-size: var(--font-regular);
   padding: 8px 48px;
 }
-.category__btn.active, .category__btn:hover{
+.category__btn.selected, .category__btn:hover{
   background-color: var(--color-dark-pink);
   border: 1px solid var(--color-dark-pink);
   color: var(--color-light-white);
 }
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count{
   opacity: 1;
   top: 0;
@@ -252,6 +252,12 @@ h3{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+.work__projects.ani-out{
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 .project{
   position: relative;
@@ -261,6 +267,9 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.project.invisible{
+  display: none;
 }
 .project__img{
   max-width: 100%;
@@ -344,6 +353,27 @@ h3{
   margin: 24px 0;
 }
 
+/* Arrow Up */
+.arrow-up{
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+.arrow-up.visible{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 /* For below 768px screen width*/
 @media screen and (max-width:768px){
   .navbar__toggle-btn{
@@ -352,12 +382,16 @@ h3{
   #navbar{
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-black);
   }
   .navbar__menu{
     flex-direction: column;
     text-align: center;
     width: 100%;
     display: none;
+  }
+  .navbar__menu.open{
+    display: block;
   }
   .about__majors{
     flex-direction: column;
