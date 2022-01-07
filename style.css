@@ -28,13 +28,21 @@ h3{
 
 /* Navbar */
 #navbar{
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-black);
+  background-color: transparent;
   color: var(--color-light-white);
   padding: 16px;
+  width: 100%;
+  transition: all var(--animation-duration) ease;
 }
+#navbar.add--dark{
+  background-color: var(--color-black);
+  padding: 8px;
+}
+
 .navbar__logo img{
   width: 100px;
   height: 100px;
@@ -70,6 +78,7 @@ h3{
 #home{
   background: url('img/background.png') center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 .home__avatar{
