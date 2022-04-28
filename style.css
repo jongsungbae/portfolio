@@ -173,6 +173,33 @@ h3{
 .job__period{
   font-size: var(--font-micro);
 }
+.about__certification{
+  margin-top: 30px;
+}
+.certification{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.certification img{
+  width: 50px;
+  height: 50px;
+}
+.certification__description{
+  margin: 0 16px;
+  text-align: left;
+}
+
+.certification__name, .certification__period{
+  margin-bottom: 0;
+  color: var(--color-dark-grey);
+}
+.certification__name{
+  font-size: var(--font-small);
+}
+.certification__period{
+  font-size: var(--font-micro);
+}
 
 /* Skill */
 #skills{
