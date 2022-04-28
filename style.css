@@ -152,6 +152,7 @@ h3{
 .job{
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 .job img{
   width: 50px;
@@ -161,7 +162,9 @@ h3{
   margin: 0 16px;
   text-align: left;
 }
+
 .job__name, .job__period{
+  margin-bottom: 0;
   color: var(--color-dark-grey);
 }
 .job__name{
