@@ -312,7 +312,9 @@ h3{
   margin-left: -12px;
   margin-top: 8px;
 }
-
+.project__description span{
+  color: var(--color-light-white);
+}
 /* Testimonial */
 #testimonials{
   background-color: var(--color-light-white);
